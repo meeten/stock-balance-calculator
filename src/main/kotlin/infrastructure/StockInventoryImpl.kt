@@ -38,7 +38,7 @@ class StockInventoryImpl : StockInventory {
 
     private fun handleSale(sale: StockOperation.Sale) {
         val groupProducts = storage[sale.groupId]
-            ?: throw IllegalStateException("Cannot sell from non-existent group: ${sale.groupId}")
+            ?: throw IllegalArgumentException("Cannot sell from non-existent group: ${sale.groupId}")
         var remainingToSell = sale.count
 
         val iterator = groupProducts.entries.iterator()

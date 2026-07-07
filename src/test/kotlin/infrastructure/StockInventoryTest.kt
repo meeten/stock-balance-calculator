@@ -170,7 +170,7 @@ class StockInventoryTest {
         val groupId = "A"
         val count = 50L
 
-        assertThrows<IllegalStateException> {
+        assertThrows<IllegalArgumentException> {
             stockInventory.process(StockOperation.Sale(groupId, count))
         }
     }

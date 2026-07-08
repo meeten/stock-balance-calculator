@@ -147,16 +147,7 @@ A;2;0
 
 ---
 
-## Running
-
-### Требования
-
-- JDK 17+
-- Gradle Wrapper
-
----
-
-### Запуск через Gradle
+### Run
 
 Linux / macOS:
 
@@ -164,9 +155,15 @@ Linux / macOS:
 ./gradlew run --args="input.csv output.csv"
 ```
 
-Windows:
+Windows (PowerShell):
 
-```bash
+```powershell
+./gradlew run --args="input.csv output.csv"
+```
+
+Windows (Command Prompt):
+
+```cmd
 gradlew.bat run --args="input.csv output.csv"
 ```
 
@@ -174,6 +171,9 @@ gradlew.bat run --args="input.csv output.csv"
 
 - `input.csv` — входной CSV-файл с операциями;
 - `output.csv` — файл, который будет создан с итоговыми остатками.
+
+> [!IMPORTANT]
+> Поместите файл `input.csv` в корневой каталог проекта или укажите относительный либо абсолютный путь к нему.
 
 После выполнения появится файл:
 
